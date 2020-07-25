@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "articulos",
+  "info": {
+    "name": "articulos"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "required": true
+    },
+    "descripcion": {
+      "type": "richtext"
+    },
+    "stock": {
+      "default": 0,
+      "type": "integer",
+      "required": true
+    },
+    "precio": {
+      "type": "integer",
+      "default": 0,
+      "required": true
+    },
+    "id_articulo": {
+      "type": "uid"
+    },
+    "usuario_admins": {
+      "via": "articulos",
+      "collection": "usuario-admin"
+    }
+  }
+}

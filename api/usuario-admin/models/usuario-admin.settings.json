@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "usuario_admins",
+  "info": {
+    "name": "Usuario_admin"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "required": true
+    },
+    "password": {
+      "type": "password",
+      "required": true
+    },
+    "id_user": {
+      "type": "uid"
+    },
+    "articulos": {
+      "collection": "articulos",
+      "via": "usuario_admins",
+      "dominant": true
+    }
+  }
+}
